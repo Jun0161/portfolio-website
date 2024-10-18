@@ -21,33 +21,33 @@ import { IoLogoGithub } from "react-icons/io5";
 import { SiLeetcode } from "react-icons/si";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
       p={2}
-      bg={active ? "grassTeal" : undefined}
-      color={active ? "#202023" : inactiveColor}
+      bg={active ? '#88CCCA' : undefined}
+      color={active ? '#202023' : inactiveColor}
       target={target}
       {...props}
     >
       {children}
     </Link>
-  );
-};
+  )
+}
 
 
 const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
-));
+))
 
 MenuLink.displayName = "MenuLink"
 
 const Navbar = (props) => {
-  const { path } = props;
+  const { path } = props
 
   return (
     <Box
@@ -94,7 +94,6 @@ const Navbar = (props) => {
             <SiLeetcode />
             LeetCode
           </LinkItem>
-
           <LinkItem
             target="_blank"
             href="https://github.com/asparagus0161/portfolio-website"
@@ -135,7 +134,7 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/asparagus0161/portfolio-website"
                 >
                   View Source
                 </MenuItem>
@@ -145,7 +144,7 @@ const Navbar = (props) => {
         </Box>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

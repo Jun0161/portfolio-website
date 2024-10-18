@@ -1,7 +1,6 @@
-import { Container, Box, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-
 import thumb_pdf_merger_tool from '../public/works/pdf-merger.png'
 import thumb_urm from '../public/works/urm.png'
 
@@ -34,6 +33,7 @@ const Works = () => {
           </WorkGridItem>
         </Section>
       </SimpleGrid>
+      <Divider my={6} />
       <Heading as="h3" fontSize={20} mb={4}>
         Collaborations
       </Heading>

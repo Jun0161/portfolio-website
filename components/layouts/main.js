@@ -2,6 +2,7 @@ import Head from "next/head"
 import Navbar from "../navbar.js"
 import { Box, Container } from "@chakra-ui/react"
 import CatModel from "../cat-model.js"
+import Footer from "../footer.js"
 
 const Main = ({children, router}) => {
     return (
@@ -21,6 +22,7 @@ const Main = ({children, router}) => {
             <Container maxW="container.md" pt={14}>
                 <CatModel />
                 {children}
+                <Footer />
             </Container>
         </Box>
     )

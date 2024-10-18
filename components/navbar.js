@@ -39,9 +39,12 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
+
 const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
 ));
+
+MenuLink.displayName = "MenuLink"
 
 const Navbar = (props) => {
   const { path } = props;
@@ -81,15 +84,12 @@ const Navbar = (props) => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-          <LinkItem href="/projects" path={path}>
-            Projects
-          </LinkItem>
           <LinkItem
             href="https://leetcode.com/u/asparagus0161/"
             path={path}
-            display="inline-flex" // Ensures the icon and text are aligned inline
-            alignItems="center" // Vertically centers the icon and text
-            style={{ gap: 4 }} // Adds spacing between the icon and the text
+            display="inline-flex" 
+            alignItems="center" 
+            style={{ gap: 4 }} 
           >
             <SiLeetcode />
             LeetCode
@@ -126,9 +126,6 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/works">
                   Works
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/projects">
-                  Projects
                 </MenuItem>
                 <MenuItem
                   as={MenuLink}

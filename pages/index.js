@@ -119,7 +119,7 @@ const Page = () => {
                   colorScheme="teal"
                   leftIcon={<IoLogoGithub />}
                 >
-                  @asparagus0161
+                  @Jun0161
                 </Button>
               </Link>
             </ListItem>
